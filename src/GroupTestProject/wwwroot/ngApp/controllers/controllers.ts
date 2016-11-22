@@ -1,9 +1,18 @@
 namespace GroupTestProject.Controllers {
 
     export class HomeController {
-        public message = 'Hello from the home page!';
-    }
+        public movies;
+        public MovieResource;
 
+        public getMovies() {
+            this.movies = this.MovieResource.query();
+        }
+        constructor(private $resource: angular.resource.IResourceService) {
+            this.MovieResource = this.$resource(`/api/movies`);
+            this.getMovies();
+        }
+
+    }
 
     export class SecretController {
         public secrets;
