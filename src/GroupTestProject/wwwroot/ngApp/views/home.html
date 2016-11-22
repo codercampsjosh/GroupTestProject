@@ -1,4 +1,6 @@
-<h2>Home</h2>
+<h2>Movies List</h2>
 <p>
-    hello, world!
+    <ul>
+        <li ng-repeat="movie in controllers.movies"><em>{{movie.title}}</em> - directed by {{movie.director}}</li>
+    </ul>
 </p>
