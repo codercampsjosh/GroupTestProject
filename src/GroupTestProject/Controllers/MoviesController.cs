@@ -21,7 +21,7 @@ namespace GroupTestProject.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            return Ok(_db.Movie.ToList());
+            return Ok(_db.Movies.ToList());
         }
 
         // GET api/values/5

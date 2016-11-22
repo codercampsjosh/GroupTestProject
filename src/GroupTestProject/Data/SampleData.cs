@@ -27,7 +27,7 @@ namespace GroupTestProject.Data
                 Director = "Del Toro"
             };
 
-            context.Movie.Add(movieOne);
+            context.Movies.Add(movieOne);
             context.SaveChanges();
 
             var movieTwo = new Movie
@@ -36,7 +36,7 @@ namespace GroupTestProject.Data
                 Director = "Spielberg"
             };
 
-            context.Movie.Add(movieTwo);
+            context.Movies.Add(movieTwo);
             context.SaveChanges();
 
             var movieThree = new Movie
@@ -45,7 +45,7 @@ namespace GroupTestProject.Data
                 Director = "Farley Brothers"
             };
 
-            context.Movie.Add(movieThree);
+            context.Movies.Add(movieThree);
             context.SaveChanges();
 
             var movieFour = new Movie
@@ -54,7 +54,7 @@ namespace GroupTestProject.Data
                 Director = "Nolan"
             };
 
-            context.Movie.Add(movieFour);
+            context.Movies.Add(movieFour);
             context.SaveChanges();
 
             // Ensure Stephen (IsAdmin)
