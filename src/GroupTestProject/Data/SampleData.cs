@@ -18,6 +18,45 @@ namespace GroupTestProject.Data
             // Ensure db
             context.Database.EnsureCreated();
 
+            //Seed Movie Database
+            
+
+            var movieOne = new Movie
+            {
+                Title = "Pacific Rim",
+                Director = "Del Toro"
+            };
+
+            context.Movie.Add(movieOne);
+            context.SaveChanges();
+
+            var movieTwo = new Movie
+            {
+                Title = "Jurassic Park",
+                Director = "Spielberg"
+            };
+
+            context.Movie.Add(movieTwo);
+            context.SaveChanges();
+
+            var movieThree = new Movie
+            {
+                Title = "Dumb & Dumber",
+                Director = "Farley Brothers"
+            };
+
+            context.Movie.Add(movieThree);
+            context.SaveChanges();
+
+            var movieFour = new Movie
+            {
+                Title = "Batman the Dark Knight",
+                Director = "Nolan"
+            };
+
+            context.Movie.Add(movieFour);
+            context.SaveChanges();
+
             // Ensure Stephen (IsAdmin)
             var stephen = await userManager.FindByNameAsync("Stephen.Walther@CoderCamps.com");
             if (stephen == null)
